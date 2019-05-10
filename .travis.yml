@@ -4,7 +4,7 @@ node_js:
 before_script:
 - npm install -g parcel
 script:
-- parcel build ./views/*.pug
+- parcel build ./views/*.pug --public-url "./"
 deploy:
   provider: pages
   skip-cleanup: true
