@@ -1,0 +1,31 @@
+{
+  "name": "simple-study-projects",
+  "version": "1.0.0",
+  "description": "simple study programs collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./views/* --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulll/simple-study-projects.git"
+  },
+  "keywords": [
+    "js",
+    "pug",
+    "stylus",
+    "canvas"
+  ],
+  "author": "paulll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulll/simple-study-projects/issues"
+  },
+  "homepage": "https://github.com/paulll/simple-study-projects#readme",
+  "devDependencies": {
+    "parcel": "^1.12.3",
+    "pug": "^2.0.3",
+    "stylus": "^0.54.5"
+  }
+}

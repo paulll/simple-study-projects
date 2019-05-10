@@ -1,0 +1,99 @@
+@font-face {
+	src: url('DejaVuSans.ttf')
+	font-family: 'DejaVu Sans'
+}
+
+html, body
+	margin 0
+	padding 0
+	top 0
+	left 0
+	bottom 0
+	right 0
+	width 100%
+	height 100%
+	font-family 'DejaVu Sans'
+
+body
+	display flex
+	align-items center
+	justify-content center
+
+[contenteditable]
+	background white
+	border-bottom 1px solid #aaa
+	padding 0 10px
+
+#main
+	display flex
+	flex-direction column
+	align-items stretch
+	justify-content center
+	padding 40px 80px
+	background whitesmoke
+
+	#title-wrap
+		padding 40px 40px
+		padding-top 20px
+		padding-left 0
+		#title
+			font-size 200%
+		#body
+			color gray
+			a
+				display inline-block
+				border-radius 20px
+				background #e9e9e9
+				padding 5px 15px
+				color gray
+				text-decoration none
+				margin 0 15px
+				&:hover
+					background #add8e6
+	#draw-zone-wrap
+		font-family Consolas, monospace
+		display flex
+
+		canvas
+			width 300px
+			height 300px
+			border solid 5px #1c1c1c
+
+		#stats-settings
+			padding 0 0px 0px 20px
+			display flex
+			flex-direction column
+			justify-content  center
+			.stat
+				width 420px
+				padding 10px
+				display flex
+				background lightblue
+				&:nth-child(2n)
+					background lavender
+			#more_needles
+				cursor pointer
+				&:hover
+					background #2fccc0
+
+			.colors
+				margin 5px 0
+				display flex
+				div
+					display flex
+					justify-content center
+					align-items center
+					height 32px
+					width 32px
+					cursor pointer
+					&.selected
+						border-bottom 3px solid gray
+				#mono
+					color white
+					background black
+				#random
+					color black
+					background deepskyblue
+				#color
+					color lawngreen
+					background #1c1c1c

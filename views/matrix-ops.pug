@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		title Matrix Ops
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="../style/matrix-ops.styl")
+		script(src="../js/matrix-ops.js" defer="defer")
+	body
+		#main
+			#title-wrap
+				#title Калькулятор матриц
+				#body Сложение, умножение и всякие преобразования
+			#matrix-wrap
+				.matrix.user-defined#m-1
+				#operation.sum.operator
+					#operation-select
+						#operation-sum.option + Сложение
+						#operation-mul.option × Умножение
+				.matrix.user-defined#m-2
+				#m-equal.operator =
+				.matrix.output#m-out
+			#action-report ...

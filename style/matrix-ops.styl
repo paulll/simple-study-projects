@@ -1,0 +1,110 @@
+html, body
+	margin 0
+	padding 0
+	top 0
+	left 0
+	bottom 0
+	right 0
+
+#main
+	max-width 800px
+	margin 0 auto
+
+	#title-wrap
+		padding 20px 40px
+		#title
+			font-size 200%
+		#body
+			color gray
+
+	#matrix-wrap
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		align-items center
+		justify-content space-between
+
+
+		#m-equal
+			font-size 50px
+
+		#operation
+			font-family monospace
+			font-size 18px
+			padding 0 12px
+			white-space nowrap
+			transition all ease 300ms
+
+			&::after
+				content: '+'
+				display block
+				font-size 50px
+				transition transform ease 300ms
+			&.mul::after
+				content: '+'
+				transform rotate(45deg)
+
+			#operation-select
+				background #1c1c1c
+				color white
+				position absolute
+				overflow hidden
+				transition all ease 300ms
+				width 0
+				margin-left 0px
+				margin-top 0px
+				.option
+					padding 4px 7px
+					cursor pointer
+					&:hover
+						background black
+						color lightskyblue
+			&:hover
+				color white
+				background #1c1c1c
+
+			&:hover #operation-select
+				width 160px
+				margin-left 40px
+
+		.matrix
+			font-family monospace
+			table
+				border-collapse collapse
+				tr
+					background whitesmoke
+					&:nth-child(2n)
+						background ghostwhite
+					&:hover
+						background lightskyblue
+					td
+						&:hover
+							background deepskyblue
+						padding 4px
+						width 24px
+						height 24px
+						overflow hidden
+
+			.controls
+				display flex
+				flex-direction row
+				&>div
+					padding 0 3px
+					color white
+					cursor pointer
+					background #2c2c2c
+				&>div:nth-child(2n)
+					background #1c1c1c
+				&>div:hover
+					color lightskyblue
+					background black
+				.addrow::after
+					content "+row"
+				.addcol::after
+					content "+col"
+				.rmrow::after
+					content "-row"
+				.rmcol::after
+					content "-col"
+				.transpose::after
+					content "T"

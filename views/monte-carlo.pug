@@ -1,0 +1,42 @@
+doctype html
+html
+	head
+		title Задача Бюффона
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="../style/monte-carlo.styl")
+		script(src="../js/monte-carlo.js" defer="defer")
+	body
+		#main
+			#title-wrap
+				#title Задача Бюффона
+				#body
+					| Иголки, нитки, вероятность и число Пи.
+					a(href="https://ru.wikipedia.org/wiki/Задача_Бюффона_о_бросании_иглы") Подробнее..
+			#draw-zone-wrap
+				canvas#draw-zone(width=300 height=300)
+				#stats-settings
+					.stat#more_needles
+						.title [+] Число иголок (N) =&nbsp;
+						.value#number 0
+					.stat
+						.title Отступ от края =&nbsp;
+						.value#padding(contenteditable="true") 1
+					.stat
+						.title Шаг сетки (d) =&nbsp;
+						.value#step(contenteditable="true") 1
+					.stat
+						.title Длина иголки (L) =&nbsp;
+						.value#length(contenteditable="true") 1
+					.stat
+						.title Количество пересечений (c) =&nbsp;
+						.value#crosses 0
+					.stat
+						.title Вычисленное π (2NL/cd) =&nbsp;
+						.value#pi 0
+					.stat
+						.title Совпадение с π (%) =&nbsp;
+						.value#percent 0
+					.colors
+						#mono(title="Монохромный") M
+						#random(title="Случайный").selected R
+						#color(title="Цветной") C
